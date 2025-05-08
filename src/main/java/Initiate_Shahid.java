@@ -17,10 +17,10 @@ public class Initiate_Shahid {
             driver.get("https://shahid.mbc.net/en?msockid=1ea2289851e965cc03cb3d7b50f964b7");
         }
     }
-/*@AfterMethod
+@AfterMethod
         public static void Close_Browser(){
                 driver.quit();
-        }*/
+        }
 
         }
 
