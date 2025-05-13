@@ -12,8 +12,9 @@ public class Scroll {
 
     public static void Scroll(WebDriver driver){
 
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("")));
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.not(ExpectedConditions.attributeToBeNotEmpty(
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//img[@title='El-Podcasters']")));
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.not(ExpectedConditions.attributeToBeNotEmpty(Utility.By_To_WebElement(driver,By.xpath("//img[@title='El-Podcasters']")),"diabled")));
+        driver.findElement(By.xpath("//img[@title='El-Podcasters']")).click();
 
     }
 }
