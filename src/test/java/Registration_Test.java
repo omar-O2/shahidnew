@@ -1,3 +1,5 @@
+import Pages.Registration_Page;
+import Pages.Sign_In_Page;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
