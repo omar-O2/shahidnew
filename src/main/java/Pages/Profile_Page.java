@@ -28,6 +28,7 @@ public class Profile_Page {
     }
 
     public Profile_Page Press_Choose_Profile_Icon() {
+
         Utility.Click_On_Element(driver, Choose_Profile_Icon);
         return this;
     }
@@ -43,6 +44,12 @@ public class Profile_Page {
     }
 
     public Profile_Page Enter_Name() {
+        Utility.Send_Data(driver, Name_Field, "elngdy");
+        return this;
+    }
+    public Profile_Page Enter_Name_In_Edit() {
+        Utility.Click_On_Element(driver,Name_Field);
+        driver.findElement(Name_Field).clear();
         Utility.Send_Data(driver, Name_Field, "elngdy");
         return this;
     }

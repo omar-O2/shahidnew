@@ -25,7 +25,7 @@ public class Profile_Test extends Initiate_Shahid{
     @Test
     public void Edit_Profile() throws InterruptedException {
         new Sign_In_Page(driver).Press_On_sign().Enter_Valid_Email().Enter_Password().Press_On_Sign_In_button();
-        new Profile_Page(driver).Press_Choose_Profile_Icon().Press_Profile_Icon().Press_Profile_Management_Button().Press_Edit_Icon().Enter_Name();
+        new Profile_Page(driver).Press_Choose_Profile_Icon().Press_Profile_Icon().Press_Profile_Management_Button().Press_Edit_Icon().Enter_Name_In_Edit();
         new Registration_Page(driver).Press_On_Ok_Button();
         new Profile_Page(driver).Press_Save_Button();
 
