@@ -1,6 +1,7 @@
 package Utilities;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -49,4 +50,12 @@ public class Utility {
 public static WebElement By_To_WebElement(WebDriver driver, By locator){
         return driver.findElement(locator);
 }
+
+    public static void Scroll_Click_On_Element(WebDriver driver, By Locator){
+
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", Utility.By_To_WebElement(driver, Locator));
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.not(ExpectedConditions.attributeToBeNotEmpty(Utility.By_To_WebElement(driver,Locator),"diabled")));
+        driver.findElement(Locator).click();
+
+    }
 }
