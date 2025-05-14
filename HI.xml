@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="sa">
+    <test name="sa">
+        <classes>
+            <class name="Profile_Test">
+                <methods>
+
+                    <include name="Add_Profile">
+
+                    </include>
+                </methods>
+
+
+
+
+            </class>
+
+
+
+
+
+
+
+        </classes>
+
+
+
+
+
+
+
+    </test>
+
+
+
+
+
+
+
+
+
+
+</suite>
