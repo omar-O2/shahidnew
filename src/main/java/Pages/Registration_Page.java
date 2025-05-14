@@ -15,6 +15,8 @@ public class Registration_Page {
     private final By Check_Box_2 = By.cssSelector("label[for='termsConditions'] span:nth-child(2)");
     private final By Create_Account_Button = By.xpath("//button[@type='submit']");
     private final By Create_Profile_Title = By.cssSelector("div[class='text-center text-[16px] font-black leading-[1.25] text-white md:font-bold md:vw-text-[24]']");
+    private final By Set_Password_Page_Title = By.xpath("//span[normalize-space()='Set password']");
+
 
 
 
@@ -55,8 +57,8 @@ public class Registration_Page {
         return this;
     }
 
-    public Registration_Page Enter_Email_In_Registration(){
-        Utility.Send_Data(driver,Email_Field,"omarradwaa@gmail.com");
+    public Registration_Page Enter_Email_In_Registration(String Email){
+        Utility.Send_Data(driver,Email_Field,Email);
         return this;
     }
 
@@ -64,8 +66,8 @@ public class Registration_Page {
         Utility.Click_On_Element(driver, Continue_Button);
         return this;
     }
-    public Registration_Page Enter_Password_In_Registration(){
-        Utility.Send_Data(driver,Password,"omar123O");
+    public Registration_Page Enter_Password_In_Registration(String Text){
+        Utility.Send_Data(driver,Password,Text);
         return this;
 
     }
@@ -87,5 +89,9 @@ public class Registration_Page {
     public Registration_Page Press_On_Create_Profile_Title(){
         Utility.Click_On_Element(driver, Create_Profile_Title);
         return this;}
+
+    public void Press_On_Set_Password_Title(){
+        Utility.Click_On_Element(driver, Set_Password_Page_Title);
+        }
 
 }
